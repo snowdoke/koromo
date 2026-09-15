@@ -1,0 +1,92 @@
+// _から始まるSCSSファイルは、CSSとして出力されない
+
+// 色
+// $color-primary: #ffffff;
+
+// フォント
+// $font-base: "Noto Sans JP", sans-serif;
+
+// フォントサイズ
+// $font-size-base: pc(16);
+
+// 余白
+// $spacing-xl: pc(32);
+
+// レイアウト
+// $content-width: 1200px;
+
+// ブレイクポイント
+$breakpoint-pc: 1440px;
+$breakpoint-tb: 768px;
+$breakpoint-sp: 375px;
+
+// tb + SP
+@mixin tb-sp {
+    @media screen and (max-width: #{$breakpoint-tb}) {
+        @content;
+    }
+}
+
+// SPだけ
+@mixin sp-only {
+    @media screen and (max-width: #{$breakpoint-sp}) {
+        @content;
+    }
+}
+
+// tbだけ
+@mixin tb-only {
+    @media screen and (min-width: #{$breakpoint-sp + 1}) and (max-width: #{$breakpoint-tb}) {
+        @content;
+    }
+}
+
+// PCだけ
+// PCファーストでは基本的に通常スタイルへ書くため、必要な場合だけ使用
+@mixin pc-only {
+    @media screen and (min-width: #{$breakpoint-tb + 1}) {
+        @content;
+    }
+}
+
+// PC + tb
+@mixin pc-tb {
+    @media screen and (min-width: #{$breakpoint-sp + 1}) {
+        @content;
+    }
+}
+
+// 表示・非表示ユーティリティ
+.pc-only {
+    @include tb-sp {
+        display: none !important;
+    }
+}
+
+.tb-only {
+    display: none !important;
+
+    @include tb-only {
+        display: revert !important;
+    }
+}
+
+.sp-only {
+    display: none !important;
+
+    @include sp-only {
+        display: revert !important;
+    }
+}
+
+.pc-tb {
+    @include sp-only {
+        display: none !important;
+    }
+}
+
+.tb-sp {
+    @include pc-only {
+        display: none !important;
+    }
+}

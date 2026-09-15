@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  background: #f5f5f5;
+  font-family: system-ui, sans-serif;
+}
+
+.preview-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px;
+  color: #fff;
+  background: #222;
+}
+
+.preview-header__content {
+  min-width: 0;
+}
+
+.preview-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.preview-header p {
+  margin: 0;
+}
+
+.preview-filter {
+  width: min(500px, 48vw);
+  padding: 10px 20px;
+  color: #fff;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.preview-filter__body {
+  display: flex;
+  gap: 8px;
+}
+
+.preview-filter__input {
+  width: min(500px, 100%);
+  padding: 10px 12px;
+  color: #222;
+  font: inherit;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.preview-filter__result {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.preview-nav {
+  padding: 8px 16px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.preview-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.preview-nav a {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #222;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+}
+
+.preview-main {
+  padding: 32px;
+}
+
+.preview-component {
+  margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.preview-component__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+.preview-component__header h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.preview-component__header p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.preview-component__body {
+  padding: 24px;
+}
+
+.preview-component__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preview-component__actions button {
+  appearance: none;
+  padding: 8px 12px;
+  color: #222;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.preview-component__actions button:hover {
+  background: #f0f0f0;
+}
+
+.preview-component__actions button:disabled {
+  color: #999;
+  cursor: not-allowed;
+  background: #eee;
+}
+
+.preview-component__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.preview-component__title-row h2 {
+  margin: 0;
+}
+
+.preview-nav__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.preview-component__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+
+.preview-component__category {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 10px;
+  color: #0066cc;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  background: #f5f9ff;
+  border: 1px solid #99c2ff;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.preview-component__category:hover {
+  background: #eaf3ff;
+}
+
+.preview-component__category:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.preview-component__description {
+  margin: 4px 0 0;
+  color: #444;
+  font-size: 13px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .preview-header {
+    display: block;
+  }
+
+  .preview-filter {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+/* p0001 */
+.p0001 {
+  padding: 40px;
+  background: #f5f5f5;
+}
+.p0001 h2 {
+  margin-top: 0;
+}
+
+/* p0002 */
+.p0002_svg-text {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  fill: #ffffff;
+}
+
+/* 1. 外側の円周テキスト：時計回りに360度回転 */
+.p0002_rotating-circle-text {
+  font-size: 16px;
+  letter-spacing: 4px;
+  transform-origin: 200px 200px;
+  animation: rotateClockwise 12s linear infinite;
+}
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 2. 内側の中心テキスト：水平方向（Y軸）に3D回転 */
+.p0002_horizontal-spin-text {
+  font-size: 24px;
+  letter-spacing: 2px;
+  transform-origin: 200px 200px;
+  /* 円の中心を軸にする */
+  animation: spinHorizontal 4s linear infinite;
+}
+
+@keyframes spinHorizontal {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

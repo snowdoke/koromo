@@ -1,0 +1,35 @@
+@media screen and (max-width: 1439px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+.tb-only {
+  display: none !important;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .tb-only {
+    display: revert !important;
+  }
+}
+
+.sp-only {
+  display: none !important;
+}
+@media screen and (max-width: 767px) {
+  .sp-only {
+    display: revert !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc-tb {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .tb-sp {
+    display: none !important;
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "scripts": {
+        "expand": "node js/components-conversion.js && node js/components-view.js",
+        "build": "node js/components-conversion.js && node js/components-view.js && node build.js",
+        "watch": "chokidar \"src/**/*\" \"js/**/*\" \"build.js\" --ignore \"dist/**/*\" --ignore \"component-library/index.html\" --ignore \"component-library/preview.css\" -c \"npm run build\" --initial --debounce 500"
+    },
+    "name": "MakeComponent",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "main": "build.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "chokidar-cli": "^3.0.0",
+        "js-yaml": "^5.2.3",
+        "prettier": "^3.9.6",
+        "sass": "^1.102.0"
+    }
+}

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Component Library Preview</title>
+  <link rel="stylesheet" href="./preview.css">
+</head>
+<body>
+  <div class="preview-sticky">
+    <header class="preview-header">
+      <div class="preview-header__content">
+        <h1>Component Library Preview</h1>
+        <p>component-library 内のコンポーネント一覧です。</p>
+      </div>
+
+      <div class="preview-filter">
+        <div class="preview-filter__body">
+          <input
+            id="component-category-filter"
+            class="preview-filter__input"
+            type="search"
+            placeholder="カテゴリで絞り込み"
+          >
+        </div>
+        <p class="preview-filter__result">
+          表示中：<span id="component-filter-count">2</span>件
+        </p>
+      </div>
+    </header>
+
+    <nav class="preview-nav">
+      <ul>
+
+<li
+  class="preview-nav__item"
+  data-filter-target
+  data-filter-category="basic sample"
+>
+  <a href="#p0001">p0001</a>
+</li>
+
+<li
+  class="preview-nav__item"
+  data-filter-target
+  data-filter-category="basic svg"
+>
+  <a href="#p0002">p0002</a>
+</li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="preview-main">
+
+<section
+  class="preview-component"
+  id="p0001"
+  data-filter-target
+  data-filter-category="basic sample"
+>
+  <div class="preview-component__header">
+    <div>
+      <div class="preview-component__title-row">
+        <h2>p0001</h2>
+        
+<div class="preview-component__categories">
+  <button class="preview-component__category" type="button" data-category-keyword="basic">basic</button>
+  <button class="preview-component__category" type="button" data-category-keyword="sample">sample</button>
+</div>
+      </div>
+      <p class="preview-component__description">基本的なサンプルのコンポーネントです。</p>
+    </div>
+
+    <div class="preview-component__actions">
+        <button type="button" data-copy-type="copyHtml" data-component-id="p0001">
+            HTMLをコピー
+        </button>
+        <button type="button" data-copy-type="copyCss" data-component-id="p0001">
+            CSSをコピー
+        </button>
+        <button type="button" data-copy-type="copyJs" data-component-id="p0001">
+            JSをコピー
+        </button>
+    </div>
+  </div>
+
+  <div class="preview-component__body">
+<section class="p0001">
+  <h2>コンポーネント p0001</h2>
+  <p>これは外部コンポーネント集から挿入されます。</p>
+  <img src="./img/sample.png" alt="サンプル画像" />
+</section>
+  </div>
+</section>
+
+<section
+  class="preview-component"
+  id="p0002"
+  data-filter-target
+  data-filter-category="basic svg"
+>
+  <div class="preview-component__header">
+    <div>
+      <div class="preview-component__title-row">
+        <h2>p0002</h2>
+        
+<div class="preview-component__categories">
+  <button class="preview-component__category" type="button" data-category-keyword="basic">basic</button>
+  <button class="preview-component__category" type="button" data-category-keyword="svg">svg</button>
+</div>
+      </div>
+      <p class="preview-component__description">基本的なSVGのコンポーネントです。</p>
+    </div>
+
+    <div class="preview-component__actions">
+        <button type="button" data-copy-type="copyHtml" data-component-id="p0002">
+            HTMLをコピー
+        </button>
+        <button type="button" data-copy-type="copyCss" data-component-id="p0002">
+            CSSをコピー
+        </button>
+        <button type="button" data-copy-type="copyJs" data-component-id="p0002">
+            JSをコピー
+        </button>
+    </div>
+  </div>
+
+  <div class="preview-component__body">
+<svg
+  xmlns="http://w3.org"
+  viewBox="0 0 400 400"
+  width="100%"
+  height="100%"
+  style="max-width: 400px; aspect-ratio: 1 / 1"
+>
+  <defs>
+    <!-- 円周テキスト用のガイドパス（時計回り） -->
+    <path id="circlePath" d="M 200,100 A 100,100 0 1,1 199.9,100 Z" fill="none" />
+  </defs>
+
+  <!-- 1. 背景：青い正方形 -->
+  <rect width="400" height="400" fill="#0055ff" />
+
+  <!-- 2. 中央の白い円 -->
+  <circle cx="200" cy="200" r="100" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3" />
+
+  <!-- 3. 外側：時計回りに回転するテキスト -->
+  <text class="p0002_svg-text p0002_rotating-circle-text">
+    <textPath href="#circlePath" startOffset="0%">
+      ROTATING TEXT ON A CIRCLE * BLUE SQUARE BACKGROUND *
+    </textPath>
+  </text>
+
+  <!-- 4. 内側：水平方向に回転するテキスト -->
+  <!-- text-anchor="middle" で中心(200, 208)を基準に左右対称に配置 -->
+  <text x="200" y="208" text-anchor="middle" class="p0002_svg-text p0002_horizontal-spin-text">
+    CENTER
+  </text>
+</svg>
+  </div>
+</section>
+  </main>
+
+  <script type="application/json" id="component-copy-data">[{"id":"p0001","copyHtml":"\u003csection class=\"p0001\"\u003e\n  \u003ch2\u003eコンポーネント p0001\u003c/h2\u003e\n  \u003cp\u003eこれは外部コンポーネント集から挿入されます。\u003c/p\u003e\n  \u003cimg src=\"@img/sample.png\" alt=\"サンプル画像\" /\u003e\n\u003c/section\u003e","copyCss":".p0001 {\n  padding: 40px;\n  background: #f5f5f5;\n}\n.p0001 h2 {\n  margin-top: 0;\n}","copyJs":"const p0001;"},{"id":"p0002","copyHtml":"\u003csvg\n  xmlns=\"http://w3.org\"\n  viewBox=\"0 0 400 400\"\n  width=\"100%\"\n  height=\"100%\"\n  style=\"max-width: 400px; aspect-ratio: 1 / 1\"\n\u003e\n  \u003cdefs\u003e\n    \u003c!-- 円周テキスト用のガイドパス（時計回り） --\u003e\n    \u003cpath id=\"circlePath\" d=\"M 200,100 A 100,100 0 1,1 199.9,100 Z\" fill=\"none\" /\u003e\n  \u003c/defs\u003e\n\n  \u003c!-- 1. 背景：青い正方形 --\u003e\n  \u003crect width=\"400\" height=\"400\" fill=\"#0055ff\" /\u003e\n\n  \u003c!-- 2. 中央の白い円 --\u003e\n  \u003ccircle cx=\"200\" cy=\"200\" r=\"100\" stroke=\"#ffffff\" stroke-width=\"2\" fill=\"none\" opacity=\"0.3\" /\u003e\n\n  \u003c!-- 3. 外側：時計回りに回転するテキスト --\u003e\n  \u003ctext class=\"p0002_svg-text p0002_rotating-circle-text\"\u003e\n    \u003ctextPath href=\"#circlePath\" startOffset=\"0%\"\u003e\n      ROTATING TEXT ON A CIRCLE * BLUE SQUARE BACKGROUND *\n    \u003c/textPath\u003e\n  \u003c/text\u003e\n\n  \u003c!-- 4. 内側：水平方向に回転するテキスト --\u003e\n  \u003c!-- text-anchor=\"middle\" で中心(200, 208)を基準に左右対称に配置 --\u003e\n  \u003ctext x=\"200\" y=\"208\" text-anchor=\"middle\" class=\"p0002_svg-text p0002_horizontal-spin-text\"\u003e\n    CENTER\n  \u003c/text\u003e\n\u003c/svg\u003e","copyCss":".p0002_svg-text {\n  font-family: \"Helvetica Neue\", Arial, sans-serif;\n  font-weight: bold;\n  fill: #ffffff;\n}\n\n/* 1. 外側の円周テキスト：時計回りに360度回転 */\n.p0002_rotating-circle-text {\n  font-size: 16px;\n  letter-spacing: 4px;\n  transform-origin: 200px 200px;\n  animation: rotateClockwise 12s linear infinite;\n}\n\n@keyframes rotateClockwise {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n/* 2. 内側の中心テキスト：水平方向（Y軸）に3D回転 */\n.p0002_horizontal-spin-text {\n  font-size: 24px;\n  letter-spacing: 2px;\n  transform-origin: 200px 200px;\n  /* 円の中心を軸にする */\n  animation: spinHorizontal 4s linear infinite;\n}\n\n@keyframes spinHorizontal {\n  from {\n    transform: rotateY(0deg);\n  }\n  to {\n    transform: rotateY(360deg);\n  }\n}","copyJs":""}]</script>
+  <script>
+(() => {
+  const dataElement = document.getElementById("component-copy-data");
+
+  if (!dataElement) return;
+
+  const copyItems = JSON.parse(dataElement.textContent);
+  const copyMap = new Map(copyItems.map((item) => [item.id, item]));
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement("textarea");
+
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.top = "-9999px";
+    textarea.style.left = "-9999px";
+
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  }
+
+  function setButtonStatus(button, message) {
+    const defaultText = button.dataset.defaultText || button.textContent;
+
+    button.dataset.defaultText = defaultText;
+    button.textContent = message;
+    button.disabled = true;
+
+    window.setTimeout(() => {
+      button.textContent = defaultText;
+      button.disabled = false;
+    }, 1200);
+  }
+
+  document.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-copy-type]");
+
+    if (!button) return;
+
+    const componentId = button.dataset.componentId;
+    const copyType = button.dataset.copyType;
+    const item = copyMap.get(componentId);
+
+    if (!item) return;
+
+    const text = item[copyType];
+
+    if (!text) {
+      setButtonStatus(button, "コピー対象なし");
+      return;
+    }
+
+    try {
+      await copyText(text);
+      setButtonStatus(button, "コピーしました");
+    } catch (error) {
+      console.error(error);
+      setButtonStatus(button, "コピー失敗");
+    }
+  });
+})();
+</script>
+  <script>
+(() => {
+  const input = document.getElementById("component-category-filter");
+  const resetButton = document.getElementById("component-category-filter-reset");
+  const countElement = document.getElementById("component-filter-count");
+
+  if (!input) return;
+
+  const targets = Array.from(
+    document.querySelectorAll("[data-filter-target]")
+  );
+
+  const sections = Array.from(
+    document.querySelectorAll(".preview-component[data-filter-target]")
+  );
+
+  function normalizeText(value) {
+    return String(value)
+      .toLowerCase()
+      .replace(/[　\s]+/g, " ")
+      .trim();
+  }
+
+  function getKeywords(value) {
+    return normalizeText(value).split(" ").filter(Boolean);
+  }
+
+  function matchesCategory(categoryText, keywords) {
+    const normalizedCategory = normalizeText(categoryText);
+
+    return keywords.every((keyword) => {
+      return normalizedCategory.includes(keyword);
+    });
+  }
+
+  function updateFilter() {
+    const keywords = getKeywords(input.value);
+    let visibleCount = 0;
+
+    for (const target of targets) {
+      const categoryText = target.dataset.filterCategory || "";
+      const matched =
+        keywords.length === 0 ||
+        matchesCategory(categoryText, keywords);
+
+      target.hidden = !matched;
+    }
+
+    for (const section of sections) {
+      if (!section.hidden) {
+        visibleCount += 1;
+      }
+    }
+
+    if (countElement) {
+      countElement.textContent = String(visibleCount);
+    }
+  }
+
+  function addFilterKeyword(keyword) {
+    const nextKeyword = normalizeText(keyword);
+
+    if (!nextKeyword) return;
+
+    const keywords = getKeywords(input.value);
+
+    if (!keywords.includes(nextKeyword)) {
+      keywords.push(nextKeyword);
+    }
+
+    input.value = keywords.join(" ");
+    input.focus();
+
+    updateFilter();
+  }
+
+  input.addEventListener("input", updateFilter);
+
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-category-keyword]");
+
+    if (!button) return;
+
+    addFilterKeyword(button.dataset.categoryKeyword || "");
+  });
+
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
+      input.value = "";
+      input.focus();
+
+      updateFilter();
+    });
+  }
+
+  updateFilter();
+})();
+</script>
+  <script src="./main.js" defer></script>
+</body>
+</html>

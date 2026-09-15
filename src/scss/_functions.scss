@@ -1,0 +1,24 @@
+// _から始まるSCSSファイルは、CSSとして出力されない
+@use "sass:meta";
+@use "sass:math";
+@use "variables" as *;
+
+@function strip-unit($value) {
+    @if meta.type-of($value)=="number" and not math.is-unitless($value) {
+        @return math.div($value, $value * 0 + 1);
+    }
+
+    @return $value;
+}
+
+@function pc($value, $base: $breakpoint-pc) {
+    @return calc(#{strip-unit($value)} / #{strip-unit($base)} * 100vw);
+}
+
+@function tb($value, $base: $breakpoint-tb) {
+    @return calc(#{strip-unit($value)} / #{strip-unit($base)} * 100vw);
+}
+
+@function sp($value, $base: $breakpoint-sp) {
+    @return calc(#{strip-unit($value)} / #{strip-unit($base)} * 100vw);
+}

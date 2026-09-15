@@ -1,0 +1,28 @@
+<!-- basic svg -->
+<!-- 基本的なSVGのコンポーネントです。 -->
+<svg xmlns="http://w3.org" viewBox="0 0 400 400" width="100%" height="100%"
+    style="max-width: 400px; aspect-ratio: 1 / 1;">
+    <defs>
+        <!-- 円周テキスト用のガイドパス（時計回り） -->
+        <path id="circlePath" d="M 200,100 A 100,100 0 1,1 199.9,100 Z" fill="none" />
+    </defs>
+
+    <!-- 1. 背景：青い正方形 -->
+    <rect width="400" height="400" fill="#0055ff" />
+
+    <!-- 2. 中央の白い円 -->
+    <circle cx="200" cy="200" r="100" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.3" />
+
+    <!-- 3. 外側：時計回りに回転するテキスト -->
+    <text class="p0002_svg-text p0002_rotating-circle-text">
+        <textPath href="#circlePath" startOffset="0%">
+            ROTATING TEXT ON A CIRCLE * BLUE SQUARE BACKGROUND *
+        </textPath>
+    </text>
+
+    <!-- 4. 内側：水平方向に回転するテキスト -->
+    <!-- text-anchor="middle" で中心(200, 208)を基準に左右対称に配置 -->
+    <text x="200" y="208" text-anchor="middle" class="p0002_svg-text p0002_horizontal-spin-text">
+        CENTER
+    </text>
+</svg>
