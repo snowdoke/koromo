@@ -14,18 +14,23 @@
         <p>component-library 内のコンポーネント一覧です。</p>
       </div>
 
-      <div class="preview-filter">
-        <div class="preview-filter__body">
-          <input
-            id="component-category-filter"
-            class="preview-filter__input"
-            type="search"
-            placeholder="カテゴリで絞り込み"
-          >
+      <div class="category_search">
+        <div>
+            <button id="openCategoryList" class="popup_category_dialog">カテゴリ一覧</button>
         </div>
-        <p class="preview-filter__result">
-          表示中：<span id="component-filter-count">2</span>件
-        </p>
+        <div class="preview-filter">
+            <div class="preview-filter__body">
+            <input
+                id="component-category-filter"
+                class="preview-filter__input"
+                type="search"
+                placeholder="カテゴリで絞り込み"
+            >
+            </div>
+            <p class="preview-filter__result">
+                表示中：<span id="component-filter-count">2</span>件
+            </p>
+        </div>
       </div>
     </header>
 
@@ -50,6 +55,16 @@
       </ul>
     </nav>
   </div>
+
+  <dialog id="categoryDialog" class="category_dialog">
+    <div class="category_dialog_header">
+        <h2>カテゴリ一覧</h2>
+        <button id="closeCategoryList" class="category_dialog_close" type="button" aria-label="閉じる">
+            ×
+        </button>
+    </div>
+    <div id="categoryList" class="category_dialog_body"></div>
+  </dialog>
 
   <main class="preview-main">
 
@@ -332,5 +347,7 @@
 })();
 </script>
   <script src="./main.js" defer></script>
+  <script src="../categories/js/categories.js" defer></script>
+  <script src="../categories/js/categoryDialog.js" defer></script>
 </body>
 </html>

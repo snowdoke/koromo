@@ -5,7 +5,7 @@
         "build": "node scripts/components-conversion.js && node scripts/components-view.js && node scripts/build.js",
         "watch": "chokidar \"src/**/*\" \"scripts/**/*\" --ignore \"dist/**/*\" --ignore \"component-library/index.html\" --ignore \"component-library/preview.css\" -c \"npm run build\" --initial --debounce 500"
     },
-    "name": "MakeComponent",
+    "name": "koromo",
     "version": "1.0.0",
     "private": true,
     "description": "",
@@ -16,8 +16,8 @@
     "type": "commonjs",
     "devDependencies": {
         "chokidar-cli": "^3.0.0",
-        "js-yaml": "^5.2.3",
-        "prettier": "^3.9.6",
-        "sass": "^1.102.0"
+        "js-yaml": "^5.4.2",
+        "prettier": "^3.9.7",
+        "sass": "^1.104.1"
     }
 }

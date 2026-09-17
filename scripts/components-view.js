@@ -545,6 +545,7 @@ body {
   height: 48px;
 
   padding: 0 18px;
+  margin-right: 6px;
 
   border: 1px solid #555;
   border-radius: 10px;

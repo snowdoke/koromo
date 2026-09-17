@@ -1,4 +1,4 @@
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 768px) {
   .pc-only {
     display: none !important;
   }
@@ -7,7 +7,7 @@
 .tb-only {
   display: none !important;
 }
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 376px) and (max-width: 768px) {
   .tb-only {
     display: revert !important;
   }
@@ -16,19 +16,19 @@
 .sp-only {
   display: none !important;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 375px) {
   .sp-only {
     display: revert !important;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 375px) {
   .pc-tb {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 769px) {
   .tb-sp {
     display: none !important;
   }
