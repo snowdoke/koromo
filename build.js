@@ -448,10 +448,22 @@ function createPageCssTags(value, rootPath, pagePath) {
 
     return files
         .map((file) => {
-            const href = resolveAssetPathForPage(file, rootPath, "css", ".css");
+            const rawValue = String(file).trim();
+            let href = rawValue;
+
+            // 外部URLはそのまま使い、ローカルCSSはバンドル時と同じ規則で解決する
+            if (!/^(https?:)?\/\//i.test(rawValue)) {
+                const cssRelativePath = normalizePageCssToCssRelativePath(rawValue);
+
+                if (!cssRelativePath) return "";
+
+                const suffix = rawValue.match(/[?#].*$/)?.[0] || "";
+                href = createAssetPath(rootPath, "css", cssRelativePath) + suffix;
+            }
 
             return `<link rel="stylesheet" href="${escapeAttribute(href)}">`;
         })
+        .filter(Boolean)
         .join("\n");
 }
 
