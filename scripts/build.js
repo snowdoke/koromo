@@ -5,8 +5,9 @@ const path = require("path");
 const sass = require("sass");
 const yaml = require("js-yaml");
 
-const SRC_DIR = path.join(__dirname, "src");
-const DIST_DIR = path.join(__dirname, "dist");
+const ROOT_DIR = path.resolve(__dirname, "..");
+const SRC_DIR = path.join(ROOT_DIR, "src");
+const DIST_DIR = path.join(ROOT_DIR, "dist");
 
 const HTML_DIR = path.join(SRC_DIR, "html");
 const COMMON_DIR = path.join(HTML_DIR, "common");

@@ -113,7 +113,7 @@ front matter の `title` と `description` が、`layout.html` に自動で反�
 
 ## 6. favicon の共通設定
 
-faviconは `build.js` 側の共通設定で管理できます。
+faviconは `scripts/build.js` 側の共通設定で管理できます。
 
 全ページに同じfaviconタグを自動で出力します。
 
@@ -178,7 +178,7 @@ snsImage: @img/ogp.jpg
 
 ## 10. 下層ページの出力形式を切り替えられる
 
-`build.js` の設定で、下層ページの出力形式を切り替えられます。
+`scripts/build.js` の設定で、下層ページの出力形式を切り替えられます。
 
 ```js
 const BUILD_CONFIG = {
@@ -329,7 +329,7 @@ pageCss: @css/about.css
 ---
 ```
 
-既定では `build.js` の `BUILD_CONFIG.bundlePageCss` が `true` のため、
+既定では `scripts/build.js` の `BUILD_CONFIG.bundlePageCss` が `true` のため、
 ページごとにCSSをまとめます。`about.html` の出力例：
 
 ```html
@@ -555,6 +555,10 @@ HTML、SCSS、JS、画像、共通パーツを編集したときに、手動で�
 現在の構成では、ファイルの役割ごとに置き場所を分けています。
 
 ```txt
+scripts/
+  build.js
+  components-conversion.js
+  components-view.js
 src/
   html/
     common/
@@ -567,6 +571,12 @@ src/
   img/
   layout.html
 ```
+
+`scripts/` はNode.jsで実行する制作・ビルド用スクリプトです。
+`components-conversion.js` がコンポーネントのHTML展開とSCSS反映、
+`components-view.js` がコンポーネント一覧・プレビュー生成、
+`build.js` が公開用ファイルの生成を担当します。
+`src/js/` はブラウザで実行するJavaScriptで、`dist/js/` にコピーされます。
 
 これにより、チーム内で「どこに何を置くか」を統一できます。
 

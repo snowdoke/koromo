@@ -1,15 +1,15 @@
 {
     "scripts": {
         "test": "node --test",
-        "expand": "node js/components-conversion.js && node js/components-view.js",
-        "build": "node js/components-conversion.js && node js/components-view.js && node build.js",
-        "watch": "chokidar \"src/**/*\" \"js/**/*\" \"build.js\" --ignore \"dist/**/*\" --ignore \"component-library/index.html\" --ignore \"component-library/preview.css\" -c \"npm run build\" --initial --debounce 500"
+        "expand": "node scripts/components-conversion.js && node scripts/components-view.js",
+        "build": "node scripts/components-conversion.js && node scripts/components-view.js && node scripts/build.js",
+        "watch": "chokidar \"src/**/*\" \"scripts/**/*\" --ignore \"dist/**/*\" --ignore \"component-library/index.html\" --ignore \"component-library/preview.css\" -c \"npm run build\" --initial --debounce 500"
     },
     "name": "MakeComponent",
     "version": "1.0.0",
     "private": true,
     "description": "",
-    "main": "build.js",
+    "main": "scripts/build.js",
     "keywords": [],
     "author": "",
     "license": "ISC",

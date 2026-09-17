@@ -10,9 +10,10 @@ const projectDir = path.resolve(__dirname, "..");
 async function buildFixture(t, { bundlePageCss, pageCss }) {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), "koromo-page-css-"));
   t.after(() => fs.rm(root, { recursive: true, force: true }));
-  const source = await fs.readFile(path.join(projectDir, "build.js"), "utf8");
+  await fs.mkdir(path.join(root, "scripts"));
+  const source = await fs.readFile(path.join(projectDir, "scripts/build.js"), "utf8");
   await fs.writeFile(
-    path.join(root, "build.js"),
+    path.join(root, "scripts/build.js"),
     source.replace("bundlePageCss: true", `bundlePageCss: ${bundlePageCss}`)
   );
   await fs.symlink(path.join(projectDir, "node_modules"), path.join(root, "node_modules"), "junction");
@@ -28,7 +29,7 @@ async function buildFixture(t, { bundlePageCss, pageCss }) {
   const page = `---\npageCss: ${JSON.stringify(pageCss)}\n---\n<main>Fixture</main>`;
   await fs.writeFile(path.join(root, "src/html/index.html"), page);
   await fs.writeFile(path.join(root, "src/html/news/detail.html"), page);
-  const result = spawnSync(process.execPath, [path.join(root, "build.js")], { encoding: "utf8" });
+  const result = spawnSync(process.execPath, [path.join(root, "scripts/build.js")], { encoding: "utf8" });
   assert.equal(result.status, 0, result.stdout + result.stderr);
   return root;
 }
