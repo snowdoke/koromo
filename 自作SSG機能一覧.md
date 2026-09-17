@@ -329,13 +329,26 @@ pageCss: @css/about.css
 ---
 ```
 
-出力例：
+既定では `build.js` の `BUILD_CONFIG.bundlePageCss` が `true` のため、
+ページごとにCSSをまとめます。`about.html` の出力例：
 
 ```html
-<link rel="stylesheet" href="../css/about.css">
+<link rel="stylesheet" href="../css/bundle_about.css">
 ```
 
+`bundlePageCss: false` にすると、個別のCSSへのリンクを指定順に出力します。
+`src/scss/pages/detail.scss` に対しては、`@css/pages/detail.css`、
+`pages/detail.css`、`pages/detail.scss`、`pages/detail` のいずれも指定できます。
+トップページでは `./css/pages/detail.css`、深い階層ではそのページからの相対パスになります。
+クエリ文字列やフラグメントも保持されます。
+
+外部CSSは通常 `externalCss` で指定してください。
+バンドルを無効にしている場合は、`pageCss` に指定された `https://...` や
+`//...` も外部URLのまま、指定順に出力します。
+
 指定がないページには追加されません。
+
+CSSパス解決の回帰テストは `npm test` で実行できます。
 
 ---
 

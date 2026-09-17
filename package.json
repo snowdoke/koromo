@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "test": "node --test",
         "expand": "node js/components-conversion.js && node js/components-view.js",
         "build": "node js/components-conversion.js && node js/components-view.js && node build.js",
         "watch": "chokidar \"src/**/*\" \"js/**/*\" \"build.js\" --ignore \"dist/**/*\" --ignore \"component-library/index.html\" --ignore \"component-library/preview.css\" -c \"npm run build\" --initial --debounce 500"
