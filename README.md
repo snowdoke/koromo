@@ -14,8 +14,6 @@ npm ci
 npm run build
 ```
 
-非公開リポジトリのため、cloneにはアクセス権のあるGitHubアカウントでの認証が必要です。
-
 ビルド後、`dist/index.html` を開いて確認します。VS CodeのLive Serverを使う場合は、同梱の `.vscode/settings.json` により `dist/` が公開ルートになります。下層ページは `/about/` などのURLで確認できます。
 
 ## 開発コマンド
@@ -186,8 +184,12 @@ pageCss: "@css/example.css"
 
 ## 詳細ドキュメント
 
-- [セットアップ](セットアップ.md)
-- [コマンド一覧](コマンド一覧.md)
+- [開発環境の準備と基本操作](開発環境の準備と基本操作.md)
+- [PowerShellコマンド一覧](PowerShellコマンド一覧.md)
 - [自作SSG機能一覧](自作SSG機能一覧.md)
-- [レイアウト](レイアウト.md)
-- [マニュアル](マニュアル.md)
+- [レイアウト変数一覧](レイアウト変数一覧.md)
+- [制作時の注意事項](制作時の注意事項.md)
+
+## ライセンス
+
+koromo は [MIT License](LICENSE) のもとで公開しています。

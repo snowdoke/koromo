@@ -12,7 +12,7 @@
     "main": "scripts/build.js",
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "type": "commonjs",
     "devDependencies": {
         "chokidar-cli": "^3.0.0",
