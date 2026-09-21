@@ -3,6 +3,8 @@
 HTML・SCSS・JavaScriptで静的サイトを制作するための、自作SSG（静的サイトジェネレーター）です。
 共通レイアウトへのページ差し込み、ページ別のメタ情報、SCSSのコンパイル、コンポーネントの展開とプレビュー生成を行い、公開用ファイルを `dist/` に出力します。
 
+デモページ：[https://gl.matrix.jp/koromo-intro/demo/](https://gl.matrix.jp/koromo-intro/demo/)
+
 ## はじめる
 
 Node.js・npm・Gitを用意してください。ロックファイルのSassはNode.js 20.19.0以上を要求します。動作確認環境はNode.js 24.20.0です。
