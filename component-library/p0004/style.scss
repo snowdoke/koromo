@@ -1,0 +1,40 @@
+// 各レイアウトで初期値を定義し、入れ子への設定の引き継ぎを防ぐ。
+.p0004-layout {
+  --p0004-min-width: 16rem;
+  --p0004-gap: 24px;
+  --p0004-columns: repeat(auto-fit, minmax(min(100%, var(--p0004-min-width)), 1fr));
+
+  display: grid;
+  grid-template-columns: var(--p0004-columns);
+  gap: var(--p0004-gap);
+  min-width: 0;
+
+  // 長い文字列が列幅を押し広げないようにする。
+  > * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  // 列数にかかわらず全幅にする。HTMLの順序は維持する。
+  > .p0004-layout__full {
+    grid-column: 1 / -1;
+  }
+}
+
+// サンプルの装飾。実際のコンテンツに置き換える際は削除できる。
+.p0004-demo {
+  padding: 24px;
+  color: #222;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  line-height: 1.7;
+
+  > * {
+    margin: 0;
+  }
+
+  > * + * {
+    margin-top: 8px;
+  }
+}

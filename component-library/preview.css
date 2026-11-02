@@ -560,3 +560,36 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* p0004 */
+.p0004-layout {
+  --p0004-min-width: 16rem;
+  --p0004-gap: 24px;
+  --p0004-columns: repeat(auto-fit, minmax(min(100%, var(--p0004-min-width)), 1fr));
+  display: grid;
+  grid-template-columns: var(--p0004-columns);
+  gap: var(--p0004-gap);
+  min-width: 0;
+}
+.p0004-layout > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.p0004-layout > .p0004-layout__full {
+  grid-column: 1/-1;
+}
+
+.p0004-demo {
+  padding: 24px;
+  color: #222;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  line-height: 1.7;
+}
+.p0004-demo > * {
+  margin: 0;
+}
+.p0004-demo > * + * {
+  margin-top: 8px;
+}

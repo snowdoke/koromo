@@ -23,5 +23,15 @@ window.categoryData = [
     "name": "scroll",
     "japanese": "",
     "count": 1
+  },
+  {
+    "name": "layout",
+    "japanese": "",
+    "count": 1
+  },
+  {
+    "name": "grid",
+    "japanese": "",
+    "count": 1
   }
 ];
