@@ -1,0 +1,46 @@
+.p0003-scroll {
+    width: 100%;
+    overflow: hidden;
+
+    &__track {
+        display: flex;
+        width: max-content;
+        animation: p0003-scroll 20s linear infinite;
+    }
+
+    &__group {
+        display: flex;
+        flex-shrink: 0;
+        gap: 24px;
+        padding-right: 24px;
+    }
+
+    .item {
+        flex-shrink: 0;
+        width: 240px;
+        height: 160px;
+
+        display: grid;
+        place-items: center;
+
+        background: #eee;
+        border-radius: 12px;
+    }
+
+    // ホバー時に止めたい場合
+    &:hover {
+        .p0003-scroll__track {
+            animation-play-state: paused;
+        }
+    }
+}
+
+@keyframes p0003-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

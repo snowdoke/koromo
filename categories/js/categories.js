@@ -13,5 +13,15 @@ window.categoryData = [
     "name": "svg",
     "japanese": "",
     "count": 1
+  },
+  {
+    "name": "design",
+    "japanese": "",
+    "count": 1
+  },
+  {
+    "name": "scroll",
+    "japanese": "",
+    "count": 1
   }
 ];

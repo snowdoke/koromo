@@ -522,3 +522,41 @@ body {
     transform: rotateY(360deg);
   }
 }
+
+/* p0003 */
+.p0003-scroll {
+  width: 100%;
+  overflow: hidden;
+}
+.p0003-scroll__track {
+  display: flex;
+  width: max-content;
+  animation: p0003-scroll 20s linear infinite;
+}
+.p0003-scroll__group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 24px;
+  padding-right: 24px;
+}
+.p0003-scroll .item {
+  flex-shrink: 0;
+  width: 240px;
+  height: 160px;
+  display: grid;
+  place-items: center;
+  background: #eee;
+  border-radius: 12px;
+}
+.p0003-scroll:hover .p0003-scroll__track {
+  animation-play-state: paused;
+}
+
+@keyframes p0003-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
