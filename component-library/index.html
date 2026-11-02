@@ -28,7 +28,7 @@
             >
             </div>
             <p class="preview-filter__result">
-                表示中：<span id="component-filter-count">4</span>件
+                表示中：<span id="component-filter-count">5</span>件
             </p>
         </div>
       </div>
@@ -67,6 +67,14 @@
   data-filter-category="layout grid"
 >
   <a href="#p0004">p0004</a>
+</li>
+
+<li
+  class="preview-nav__item"
+  data-filter-target
+  data-filter-category="layout flex"
+>
+  <a href="#p0005">p0005</a>
 </li>
       </ul>
     </nav>
@@ -301,9 +309,62 @@
 </div>
   </div>
 </section>
+
+<section
+  class="preview-component"
+  id="p0005"
+  data-filter-target
+  data-filter-category="layout flex"
+>
+  <div class="preview-component__header">
+    <div>
+      <div class="preview-component__title-row">
+        <h2>p0005</h2>
+
+<div class="preview-component__categories">
+  <button class="preview-component__category" type="button" data-category-keyword="layout">layout</button>
+  <button class="preview-component__category" type="button" data-category-keyword="flex">flex</button>
+</div>
+      </div>
+      <p class="preview-component__description">親の幅に応じて折り返す汎用Flexレイアウト。項目の幅・余白・揃え方を調整できます。</p>
+    </div>
+
+    <div class="preview-component__actions">
+        <button type="button" data-copy-type="copyHtml" data-component-id="p0005">
+            HTMLをコピー
+        </button>
+        <button type="button" data-copy-type="copyCss" data-component-id="p0005">
+            CSSをコピー
+        </button>
+        <button type="button" data-copy-type="copyJs" data-component-id="p0005">
+            JSをコピー
+        </button>
+    </div>
+  </div>
+
+  <div class="preview-component__body">
+<div class="p0005-layout">
+  <article class="p0005-demo">
+    <h3>01. 幅に合わせて折り返す</h3>
+    <p>親の幅に収まるように折り返し、各行の項目が余った幅に広がります。</p>
+  </article>
+  <article class="p0005-demo">
+    <h3>02. 内容を自由に入れる</h3>
+    <p>テキストや画像、カードなど、直下に置いた要素がレイアウトの項目になります。</p>
+  </article>
+  <article class="p0005-demo">
+    <h3>03. 用途に合わせて広げる</h3>
+    <p>幅や揃え方は標準のFlexプロパティで変更できます。入れ子にも対応しています。</p>
+  </article>
+  <div class="p0005-layout__full p0005-demo">
+    <p>全幅エリア：見出しや補足、アクションなど、1行全体を使う要素に使えます。</p>
+  </div>
+</div>
+  </div>
+</section>
   </main>
 
-  <script type="application/json" id="component-copy-data">[{"id":"p0001","copyHtml":"\u003csection class=\"p0001\"\u003e\n  \u003ch2\u003eコンポーネント p0001\u003c/h2\u003e\n  \u003cp\u003eこれは外部コンポーネント集から挿入されます。\u003c/p\u003e\n  \u003cimg src=\"@img/sample.png\" alt=\"サンプル画像\" /\u003e\n\u003c/section\u003e","copyCss":".p0001 {\n  padding: 40px;\n  background: #f5f5f5;\n}\n.p0001 h2 {\n  margin-top: 0;\n}","copyJs":"const p0001;"},{"id":"p0002","copyHtml":"\u003csvg\n  xmlns=\"http://w3.org\"\n  viewBox=\"0 0 400 400\"\n  width=\"100%\"\n  height=\"100%\"\n  style=\"max-width: 400px; aspect-ratio: 1 / 1\"\n\u003e\n  \u003cdefs\u003e\n    \u003c!-- 円周テキスト用のガイドパス（時計回り） --\u003e\n    \u003cpath id=\"circlePath\" d=\"M 200,100 A 100,100 0 1,1 199.9,100 Z\" fill=\"none\" /\u003e\n  \u003c/defs\u003e\n\n  \u003c!-- 1. 背景：青い正方形 --\u003e\n  \u003crect width=\"400\" height=\"400\" fill=\"#0055ff\" /\u003e\n\n  \u003c!-- 2. 中央の白い円 --\u003e\n  \u003ccircle cx=\"200\" cy=\"200\" r=\"100\" stroke=\"#ffffff\" stroke-width=\"2\" fill=\"none\" opacity=\"0.3\" /\u003e\n\n  \u003c!-- 3. 外側：時計回りに回転するテキスト --\u003e\n  \u003ctext class=\"p0002_svg-text p0002_rotating-circle-text\"\u003e\n    \u003ctextPath href=\"#circlePath\" startOffset=\"0%\"\u003e\n      ROTATING TEXT ON A CIRCLE * BLUE SQUARE BACKGROUND *\n    \u003c/textPath\u003e\n  \u003c/text\u003e\n\n  \u003c!-- 4. 内側：水平方向に回転するテキスト --\u003e\n  \u003c!-- text-anchor=\"middle\" で中心(200, 208)を基準に左右対称に配置 --\u003e\n  \u003ctext x=\"200\" y=\"208\" text-anchor=\"middle\" class=\"p0002_svg-text p0002_horizontal-spin-text\"\u003e\n    CENTER\n  \u003c/text\u003e\n\u003c/svg\u003e","copyCss":".p0002_svg-text {\n  font-family: \"Helvetica Neue\", Arial, sans-serif;\n  font-weight: bold;\n  fill: #ffffff;\n}\n\n/* 1. 外側の円周テキスト：時計回りに360度回転 */\n.p0002_rotating-circle-text {\n  font-size: 16px;\n  letter-spacing: 4px;\n  transform-origin: 200px 200px;\n  animation: rotateClockwise 12s linear infinite;\n}\n\n@keyframes rotateClockwise {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n/* 2. 内側の中心テキスト：水平方向（Y軸）に3D回転 */\n.p0002_horizontal-spin-text {\n  font-size: 24px;\n  letter-spacing: 2px;\n  transform-origin: 200px 200px;\n  /* 円の中心を軸にする */\n  animation: spinHorizontal 4s linear infinite;\n}\n\n@keyframes spinHorizontal {\n  from {\n    transform: rotateY(0deg);\n  }\n  to {\n    transform: rotateY(360deg);\n  }\n}","copyJs":""},{"id":"p0003","copyHtml":"\u003cdiv class=\"p0003-scroll\"\u003e\n  \u003cdiv class=\"p0003-scroll__track\"\u003e\n    \u003cdiv class=\"p0003-scroll__group\"\u003e\n      \u003cdiv class=\"item\"\u003eITEM 01\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 02\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 03\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 04\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 05\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 06\u003c/div\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"p0003-scroll__group\" aria-hidden=\"true\"\u003e\n      \u003cdiv class=\"item\"\u003eITEM 01\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 02\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 03\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 04\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 05\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 06\u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e","copyCss":".p0003-scroll {\n  width: 100%;\n  overflow: hidden;\n}\n.p0003-scroll__track {\n  display: flex;\n  width: max-content;\n  animation: p0003-scroll 20s linear infinite;\n}\n.p0003-scroll__group {\n  display: flex;\n  flex-shrink: 0;\n  gap: 24px;\n  padding-right: 24px;\n}\n.p0003-scroll .item {\n  flex-shrink: 0;\n  width: 240px;\n  height: 160px;\n  display: grid;\n  place-items: center;\n  background: #eee;\n  border-radius: 12px;\n}\n.p0003-scroll:hover .p0003-scroll__track {\n  animation-play-state: paused;\n}\n\n@keyframes p0003-scroll {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n  }\n}","copyJs":""},{"id":"p0004","copyHtml":"\u003cdiv class=\"p0004-layout\"\u003e\n  \u003carticle class=\"p0004-demo\"\u003e\n    \u003ch3\u003e01. 幅に合わせて並ぶ\u003c/h3\u003e\n    \u003cp\u003e要素を追加するだけで、親の幅に収まる列数に自動で調整されます。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003carticle class=\"p0004-demo\"\u003e\n    \u003ch3\u003e02. 内容を自由に入れる\u003c/h3\u003e\n    \u003cp\u003eテキストや画像、カードなど、直下に置いた要素がレイアウトの項目になります。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003carticle class=\"p0004-demo\"\u003e\n    \u003ch3\u003e03. 用途に合わせて広げる\u003c/h3\u003e\n    \u003cp\u003eCSS変数で列幅や余白を変更できます。同じレイアウトの入れ子も可能です。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003cdiv class=\"p0004-layout__full p0004-demo\"\u003e\n    \u003cp\u003e全幅エリア：見出しや補足、アクションなど、すべての列をまたぐ要素に使えます。\u003c/p\u003e\n  \u003c/div\u003e\n\u003c/div\u003e","copyCss":".p0004-layout {\n  --p0004-min-width: 16rem;\n  --p0004-gap: 24px;\n  --p0004-columns: repeat(auto-fit, minmax(min(100%, var(--p0004-min-width)), 1fr));\n  display: grid;\n  grid-template-columns: var(--p0004-columns);\n  gap: var(--p0004-gap);\n  min-width: 0;\n}\n.p0004-layout \u003e * {\n  min-width: 0;\n  overflow-wrap: anywhere;\n}\n.p0004-layout \u003e .p0004-layout__full {\n  grid-column: 1/-1;\n}\n\n.p0004-demo {\n  padding: 24px;\n  color: #222;\n  background: #f5f5f5;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n  line-height: 1.7;\n}\n.p0004-demo \u003e * {\n  margin: 0;\n}\n.p0004-demo \u003e * + * {\n  margin-top: 8px;\n}","copyJs":""}]</script>
+  <script type="application/json" id="component-copy-data">[{"id":"p0001","copyHtml":"\u003csection class=\"p0001\"\u003e\n  \u003ch2\u003eコンポーネント p0001\u003c/h2\u003e\n  \u003cp\u003eこれは外部コンポーネント集から挿入されます。\u003c/p\u003e\n  \u003cimg src=\"@img/sample.png\" alt=\"サンプル画像\" /\u003e\n\u003c/section\u003e","copyCss":".p0001 {\n  padding: 40px;\n  background: #f5f5f5;\n}\n.p0001 h2 {\n  margin-top: 0;\n}","copyJs":"const p0001;"},{"id":"p0002","copyHtml":"\u003csvg\n  xmlns=\"http://w3.org\"\n  viewBox=\"0 0 400 400\"\n  width=\"100%\"\n  height=\"100%\"\n  style=\"max-width: 400px; aspect-ratio: 1 / 1\"\n\u003e\n  \u003cdefs\u003e\n    \u003c!-- 円周テキスト用のガイドパス（時計回り） --\u003e\n    \u003cpath id=\"circlePath\" d=\"M 200,100 A 100,100 0 1,1 199.9,100 Z\" fill=\"none\" /\u003e\n  \u003c/defs\u003e\n\n  \u003c!-- 1. 背景：青い正方形 --\u003e\n  \u003crect width=\"400\" height=\"400\" fill=\"#0055ff\" /\u003e\n\n  \u003c!-- 2. 中央の白い円 --\u003e\n  \u003ccircle cx=\"200\" cy=\"200\" r=\"100\" stroke=\"#ffffff\" stroke-width=\"2\" fill=\"none\" opacity=\"0.3\" /\u003e\n\n  \u003c!-- 3. 外側：時計回りに回転するテキスト --\u003e\n  \u003ctext class=\"p0002_svg-text p0002_rotating-circle-text\"\u003e\n    \u003ctextPath href=\"#circlePath\" startOffset=\"0%\"\u003e\n      ROTATING TEXT ON A CIRCLE * BLUE SQUARE BACKGROUND *\n    \u003c/textPath\u003e\n  \u003c/text\u003e\n\n  \u003c!-- 4. 内側：水平方向に回転するテキスト --\u003e\n  \u003c!-- text-anchor=\"middle\" で中心(200, 208)を基準に左右対称に配置 --\u003e\n  \u003ctext x=\"200\" y=\"208\" text-anchor=\"middle\" class=\"p0002_svg-text p0002_horizontal-spin-text\"\u003e\n    CENTER\n  \u003c/text\u003e\n\u003c/svg\u003e","copyCss":".p0002_svg-text {\n  font-family: \"Helvetica Neue\", Arial, sans-serif;\n  font-weight: bold;\n  fill: #ffffff;\n}\n\n/* 1. 外側の円周テキスト：時計回りに360度回転 */\n.p0002_rotating-circle-text {\n  font-size: 16px;\n  letter-spacing: 4px;\n  transform-origin: 200px 200px;\n  animation: rotateClockwise 12s linear infinite;\n}\n\n@keyframes rotateClockwise {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n/* 2. 内側の中心テキスト：水平方向（Y軸）に3D回転 */\n.p0002_horizontal-spin-text {\n  font-size: 24px;\n  letter-spacing: 2px;\n  transform-origin: 200px 200px;\n  /* 円の中心を軸にする */\n  animation: spinHorizontal 4s linear infinite;\n}\n\n@keyframes spinHorizontal {\n  from {\n    transform: rotateY(0deg);\n  }\n  to {\n    transform: rotateY(360deg);\n  }\n}","copyJs":""},{"id":"p0003","copyHtml":"\u003cdiv class=\"p0003-scroll\"\u003e\n  \u003cdiv class=\"p0003-scroll__track\"\u003e\n    \u003cdiv class=\"p0003-scroll__group\"\u003e\n      \u003cdiv class=\"item\"\u003eITEM 01\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 02\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 03\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 04\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 05\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 06\u003c/div\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"p0003-scroll__group\" aria-hidden=\"true\"\u003e\n      \u003cdiv class=\"item\"\u003eITEM 01\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 02\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 03\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 04\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 05\u003c/div\u003e\n      \u003cdiv class=\"item\"\u003eITEM 06\u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e","copyCss":".p0003-scroll {\n  width: 100%;\n  overflow: hidden;\n}\n.p0003-scroll__track {\n  display: flex;\n  width: max-content;\n  animation: p0003-scroll 20s linear infinite;\n}\n.p0003-scroll__group {\n  display: flex;\n  flex-shrink: 0;\n  gap: 24px;\n  padding-right: 24px;\n}\n.p0003-scroll .item {\n  flex-shrink: 0;\n  width: 240px;\n  height: 160px;\n  display: grid;\n  place-items: center;\n  background: #eee;\n  border-radius: 12px;\n}\n.p0003-scroll:hover .p0003-scroll__track {\n  animation-play-state: paused;\n}\n\n@keyframes p0003-scroll {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n  }\n}","copyJs":""},{"id":"p0004","copyHtml":"\u003cdiv class=\"p0004-layout\"\u003e\n  \u003carticle class=\"p0004-demo\"\u003e\n    \u003ch3\u003e01. 幅に合わせて並ぶ\u003c/h3\u003e\n    \u003cp\u003e要素を追加するだけで、親の幅に収まる列数に自動で調整されます。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003carticle class=\"p0004-demo\"\u003e\n    \u003ch3\u003e02. 内容を自由に入れる\u003c/h3\u003e\n    \u003cp\u003eテキストや画像、カードなど、直下に置いた要素がレイアウトの項目になります。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003carticle class=\"p0004-demo\"\u003e\n    \u003ch3\u003e03. 用途に合わせて広げる\u003c/h3\u003e\n    \u003cp\u003eCSS変数で列幅や余白を変更できます。同じレイアウトの入れ子も可能です。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003cdiv class=\"p0004-layout__full p0004-demo\"\u003e\n    \u003cp\u003e全幅エリア：見出しや補足、アクションなど、すべての列をまたぐ要素に使えます。\u003c/p\u003e\n  \u003c/div\u003e\n\u003c/div\u003e","copyCss":".p0004-layout {\n  --p0004-min-width: 16rem;\n  --p0004-gap: 24px;\n  --p0004-columns: repeat(auto-fit, minmax(min(100%, var(--p0004-min-width)), 1fr));\n  display: grid;\n  grid-template-columns: var(--p0004-columns);\n  gap: var(--p0004-gap);\n  min-width: 0;\n}\n.p0004-layout \u003e * {\n  min-width: 0;\n  overflow-wrap: anywhere;\n}\n.p0004-layout \u003e .p0004-layout__full {\n  grid-column: 1/-1;\n}\n\n.p0004-demo {\n  padding: 24px;\n  color: #222;\n  background: #f5f5f5;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n  line-height: 1.7;\n}\n.p0004-demo \u003e * {\n  margin: 0;\n}\n.p0004-demo \u003e * + * {\n  margin-top: 8px;\n}","copyJs":""},{"id":"p0005","copyHtml":"\u003cdiv class=\"p0005-layout\"\u003e\n  \u003carticle class=\"p0005-demo\"\u003e\n    \u003ch3\u003e01. 幅に合わせて折り返す\u003c/h3\u003e\n    \u003cp\u003e親の幅に収まるように折り返し、各行の項目が余った幅に広がります。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003carticle class=\"p0005-demo\"\u003e\n    \u003ch3\u003e02. 内容を自由に入れる\u003c/h3\u003e\n    \u003cp\u003eテキストや画像、カードなど、直下に置いた要素がレイアウトの項目になります。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003carticle class=\"p0005-demo\"\u003e\n    \u003ch3\u003e03. 用途に合わせて広げる\u003c/h3\u003e\n    \u003cp\u003e幅や揃え方は標準のFlexプロパティで変更できます。入れ子にも対応しています。\u003c/p\u003e\n  \u003c/article\u003e\n  \u003cdiv class=\"p0005-layout__full p0005-demo\"\u003e\n    \u003cp\u003e全幅エリア：見出しや補足、アクションなど、1行全体を使う要素に使えます。\u003c/p\u003e\n  \u003c/div\u003e\n\u003c/div\u003e","copyCss":".p0005-layout {\n  --p0005-gap: 24px;\n  display: flex;\n  flex-wrap: wrap;\n  gap: var(--p0005-gap);\n  min-width: 0;\n}\n.p0005-layout \u003e * {\n  box-sizing: border-box;\n  flex: 1 1 16rem;\n  min-width: 0;\n  overflow-wrap: anywhere;\n}\n.p0005-layout \u003e .p0005-layout__full {\n  flex: 0 0 100%;\n}\n\n.p0005-demo {\n  padding: 24px;\n  color: #222;\n  background: #f5f5f5;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n  line-height: 1.7;\n}\n.p0005-demo \u003e * {\n  margin: 0;\n}\n.p0005-demo \u003e * + * {\n  margin-top: 8px;\n}","copyJs":""}]</script>
   <script>
 (() => {
   const dataElement = document.getElementById("component-copy-data");

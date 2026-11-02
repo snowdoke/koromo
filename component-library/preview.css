@@ -593,3 +593,36 @@ body {
 .p0004-demo > * + * {
   margin-top: 8px;
 }
+
+/* p0005 */
+.p0005-layout {
+  --p0005-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--p0005-gap);
+  min-width: 0;
+}
+.p0005-layout > * {
+  box-sizing: border-box;
+  flex: 1 1 16rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.p0005-layout > .p0005-layout__full {
+  flex: 0 0 100%;
+}
+
+.p0005-demo {
+  padding: 24px;
+  color: #222;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  line-height: 1.7;
+}
+.p0005-demo > * {
+  margin: 0;
+}
+.p0005-demo > * + * {
+  margin-top: 8px;
+}

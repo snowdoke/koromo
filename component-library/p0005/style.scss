@@ -1,0 +1,40 @@
+.p0005-layout {
+  // 入れ子のレイアウトへ親の余白設定を引き継がない。
+  --p0005-gap: 24px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--p0005-gap);
+  min-width: 0;
+
+  // 16remを基準に折り返し、各行の余った幅を分け合う。
+  > * {
+    box-sizing: border-box;
+    flex: 1 1 16rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  // 標準の横並びで1行全体を使う。HTMLの順序は維持する。
+  > .p0005-layout__full {
+    flex: 0 0 100%;
+  }
+}
+
+// サンプルの装飾。実際のコンテンツに置き換える際は削除できる。
+.p0005-demo {
+  padding: 24px;
+  color: #222;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  line-height: 1.7;
+
+  > * {
+    margin: 0;
+  }
+
+  > * + * {
+    margin-top: 8px;
+  }
+}

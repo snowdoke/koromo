@@ -27,10 +27,15 @@ window.categoryData = [
   {
     "name": "layout",
     "japanese": "",
-    "count": 1
+    "count": 2
   },
   {
     "name": "grid",
+    "japanese": "",
+    "count": 1
+  },
+  {
+    "name": "flex",
     "japanese": "",
     "count": 1
   }
